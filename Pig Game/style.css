@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --primary-color:#753682;
+  --second-color:#bf2e34 ;
+  --text-color:#333;
+  --background:rgba(0,0,0,0.35);
+  --third-color:#c7365f;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: -webkit-gradient(linear, right bottom, left top, from(var(--primary-color)), to(var(--second-color))) no-repeat;
+  background: linear-gradient(to top left, var(--primary-color) 0%, var(--second-color) 100%) no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text-color);
+  font-weight: 400px;
+  height: 100vh;
+}
+
+main {
+  width: 100rem;
+  height: 60rem;
+  position: relative;
+  background-color: var(--background);
+  border-radius: 20px;
+}
+main .player {
+  width: 50%;
+  float: left;
+  background-color: rgb(230, 134, 249);
+}
+main .player-active {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+main .player--0 {
+  border-radius: 20px 0 0 20px;
+}
+main .player--1 {
+  border-radius: 0 20px 20px 0;
+}
+main .player--0, main .player--1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+main .player--0 .title h2, main .player--1 .title h2 {
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+}
+main .player--0 .title p, main .player--1 .title p {
+  font-size: 80px;
+  text-align: center;
+  margin-top: 30px;
+  color: var(--third-color);
+}
+main .player--0 .current, main .player--1 .current {
+  background-color: var(--primary-color);
+  padding: 26px 70px;
+  border-radius: 10px;
+}
+main .player--0 .current p, main .player--1 .current p {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+}
+main .player--0 .current .current-score, main .player--1 .current .current-score {
+  font-weight: bolder;
+  font-size: 30px;
+}
+main img {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -35%);
+          transform: translate(-50%, -35%);
+  width: 80px;
+  height: 80px;
+}
+main button {
+  position: absolute;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 22px;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #222;
+}
+main .new-game {
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+}
+main .roll {
+  bottom: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+}
+main .hold {
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+}
+main .hidden {
+  display: none;
+}
+main .disabled {
+  pointer-events: none;
+  cursor: no-drop;
+}
+main .player--winner {
+  background-color: #2f2f2f;
+}
+main .player--winner .name {
+  color: #bf2e34;
+  font-weight: bolder;
+}
